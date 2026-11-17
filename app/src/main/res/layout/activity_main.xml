@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:textDirection="anyRtl">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حارس مكالمات واتساب بزنس"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1) تفعيل قراءة الإشعارات" />
+
+        <Button
+            android:id="@+id/btnAccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) تفعيل خدمة الأتمتة (إمكانية الوصول)" />
+
+        <Button
+            android:id="@+id/btnOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3) السماح بالعرض فوق التطبيقات" />
+
+        <Button
+            android:id="@+id/btnAppInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إعدادات التطبيق (للسماح بالإعدادات المقيّدة)" />
+
+        <Switch
+            android:id="@+id/swEnabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="تفعيل الحماية" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="عدد المكالمات الفائتة قبل الحظر" />
+
+        <EditText
+            android:id="@+id/etMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="مدة العد بالساعات (بعدها يبدأ العد من جديد)" />
+
+        <EditText
+            android:id="@+id/etWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <CheckBox
+            android:id="@+id/cbWarn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="إرسال رسالة تحذير تلقائية" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="أرسل التحذير عند المكالمة رقم" />
+
+        <EditText
+            android:id="@+id/etWarnAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="نص التحذير (يمكنك استخدام {count} و {max})" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="أرقام مستثناة من الحظر (رقم في كل سطر)" />
+
+        <EditText
+            android:id="@+id/etWhitelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:minLines="2" />
+
+        <CheckBox
+            android:id="@+id/cbBusiness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="مراقبة واتساب بزنس" />
+
+        <CheckBox
+            android:id="@+id/cbRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مراقبة واتساب العادي أيضاً" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="حفظ الإعدادات" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تصفير عدادات الأرقام" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="تجربة الأتمتة على رقم (استخدم رقماً احتياطياً بصيغة دولية)"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="مثال: 201001234567"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/btnTestWarn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تجربة إرسال التحذير" />
+
+        <Button
+            android:id="@+id/btnTestBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تجربة الحظر (سيحظر الرقم فعلاً)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="سجل الأحداث"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textDirection="ltr"
+            android:textIsSelectable="true"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحديث" />
+
+        <Button
+            android:id="@+id/btnClearLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مسح السجل" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حارس مكالمات واتساب</string>
+    <string name="accessibility_desc">يفتح محادثة الرقم في واتساب ويرسل رسالة التحذير أو ينفذ الحظر تلقائياً بعد تكرار المكالمات الفائتة.</string>
+</resources>
