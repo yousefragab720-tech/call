@@ -99,8 +99,22 @@ class GuardAccessibilityService : AccessibilityService() {
         handler.post(kickRunnable)
     }
 
+    @Volatile
+    private var manualRun = false
+
+    /** تنفيذ المهام المعلّقة الآن حتى لو كان التشغيل التلقائي مقفولاً. */
+    fun runNow() {
+        manualRun = true
+        kick()
+    }
+
     private fun kickInternal() {
-        if (running || !JobQueue.hasPending()) return
+        if (running) return
+        if (!JobQueue.hasPending()) {
+            manualRun = false
+            return
+        }
+        if (!Prefs.autoRun(this) && !manualRun) return
         if (!canAct()) {
             // الشاشة مقفولة: نحاول تاني، وبعد فتح القفل يشتغل فوراً
             handler.postDelayed(kickRunnable, 15_000L)

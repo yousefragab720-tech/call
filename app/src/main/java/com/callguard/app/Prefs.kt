@@ -35,6 +35,17 @@ object Prefs {
     fun whitelist(c: Context): String = sp(c).getString("wl", "") ?: ""
     fun useBusiness(c: Context): Boolean = sp(c).getBoolean("biz", true)
     fun useRegular(c: Context): Boolean = sp(c).getBoolean("reg", false)
+    fun autoRun(c: Context): Boolean = sp(c).getBoolean("auto", true)
+    fun lang(c: Context): String = sp(c).getString("lang", "system") ?: "system"
+    fun theme(c: Context): String = sp(c).getString("theme", "system") ?: "system"
+
+    fun setLangPref(c: Context, v: String) {
+        sp(c).edit().putString("lang", v).apply()
+    }
+
+    fun setThemePref(c: Context, v: String) {
+        sp(c).edit().putString("theme", v).apply()
+    }
 
     fun saveSettings(
         c: Context,
@@ -46,7 +57,8 @@ object Prefs {
         msg: String,
         wl: String,
         biz: Boolean,
-        reg: Boolean
+        reg: Boolean,
+        auto: Boolean
     ) {
         sp(c).edit()
             .putBoolean("enabled", enabled)
@@ -58,6 +70,7 @@ object Prefs {
             .putString("wl", wl)
             .putBoolean("biz", biz)
             .putBoolean("reg", reg)
+            .putBoolean("auto", auto)
             .apply()
     }
 
@@ -105,6 +118,35 @@ object Prefs {
     fun markBlocked(c: Context, number: String) {
         val r = load(c, number) ?: CallRecord(0, System.currentTimeMillis(), false, false)
         save(c, number, r.copy(blocked = true))
+        addBlocked(c, number)
+    }
+
+    // ---------- قائمة الأرقام المحظورة ----------
+
+    @Synchronized
+    fun addBlocked(c: Context, number: String) {
+        val now = System.currentTimeMillis()
+        val lines = ArrayList<String>()
+        lines.add("$number|$now")
+        val old = sp(c).getString("blocked_log", "") ?: ""
+        for (l in old.split("\n")) {
+            if (l.isNotEmpty() && !l.startsWith("$number|")) lines.add(l)
+        }
+        sp(c).edit().putString("blocked_log", lines.take(500).joinToString("\n")).apply()
+    }
+
+    fun blockedList(c: Context): List<Pair<String, Long>> {
+        val s = sp(c).getString("blocked_log", "") ?: ""
+        val out = ArrayList<Pair<String, Long>>()
+        for (l in s.split("\n")) {
+            val p = l.split("|")
+            if (p.size == 2) out.add(Pair(p[0], p[1].toLongOrNull() ?: 0L))
+        }
+        return out
+    }
+
+    fun clearBlockedList(c: Context) {
+        sp(c).edit().remove("blocked_log").apply()
     }
 
     @Synchronized

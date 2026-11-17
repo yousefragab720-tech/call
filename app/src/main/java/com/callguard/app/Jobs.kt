@@ -31,9 +31,12 @@ object JobQueue {
     fun hasPending(): Boolean = pending.isNotEmpty()
 
     @Synchronized
+    fun pendingCount(): Int = pending.size
+
+    @Synchronized
     fun take(): GuardJob? {
         val now = System.currentTimeMillis()
-        pending.removeAll { now - it.created > 15 * 60_000L }
+        pending.removeAll { now - it.created > 12 * 3_600_000L }
         if (pending.isEmpty()) return null
         val j = pending.removeAt(0)
         active = j

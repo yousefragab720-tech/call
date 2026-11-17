@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">حارس مكالمات واتساب بزنس</string>
+    <string name="accessibility_desc">يفتح محادثة الرقم في واتساب ويرسل رسالة التحذير أو ينفذ الحظر تلقائياً بعد تكرار المكالمات الفائتة.</string>
+
+    <string name="status_notif">قراءة الإشعارات: %1$s</string>
+    <string name="status_acc">خدمة الأتمتة (إمكانية الوصول): %1$s</string>
+    <string name="status_overlay">العرض فوق التطبيقات: %1$s</string>
+    <string name="status_pending">إجراءات معلّقة: %1$d</string>
+
+    <string name="btn_notif">1) تفعيل قراءة الإشعارات</string>
+    <string name="btn_access">2) تفعيل خدمة الأتمتة (إمكانية الوصول)</string>
+    <string name="btn_overlay">3) السماح بالعرض فوق التطبيقات</string>
+    <string name="btn_appinfo">إعدادات التطبيق (للسماح بالإعدادات المقيّدة)</string>
+
+    <string name="sec_appearance">المظهر</string>
+    <string name="lbl_language">اللغة</string>
+    <string name="lang_system">النظام</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_en">English</string>
+    <string name="lbl_theme">السمة</string>
+    <string name="theme_system">النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+
+    <string name="sw_enabled">تفعيل الحماية</string>
+    <string name="lbl_max">عدد المكالمات الفائتة قبل الحظر</string>
+    <string name="lbl_window">مدة العد بالساعات (بعدها يبدأ العد من جديد)</string>
+    <string name="cb_warn">إرسال رسالة تحذير تلقائية</string>
+    <string name="lbl_warnat">أرسل التحذير عند المكالمة رقم</string>
+    <string name="lbl_message">نص التحذير (يمكنك استخدام {count} و {max})</string>
+    <string name="lbl_whitelist">أرقام مستثناة من الحظر (رقم في كل سطر)</string>
+    <string name="cb_business">مراقبة واتساب بزنس</string>
+    <string name="cb_regular">مراقبة واتساب العادي أيضاً</string>
+
+    <string name="sec_run">التنفيذ</string>
+    <string name="cb_auto">تنفيذ الإجراءات تلقائياً بمجرد استحقاقها</string>
+    <string name="lbl_auto_hint">يفتح واتساب على الشاشة حوالي 10 ثوان لكل إجراء. لو أغلقت هذا الخيار تنتظر الإجراءات في قائمة حتى تضغط الزر بالأسفل.</string>
+    <string name="btn_runnow_n">نفّذ الإجراءات المعلّقة الآن (%1$d)</string>
+
+    <string name="btn_save">حفظ الإعدادات</string>
+    <string name="btn_reset">تصفير عدادات الأرقام</string>
+
+    <string name="sec_blocked_n">الأرقام المحظورة (%1$d)</string>
+    <string name="blocked_empty">لا توجد أرقام محظورة بعد</string>
+    <string name="btn_copy_blocked">نسخ القائمة</string>
+    <string name="btn_clear_blocked">مسح القائمة</string>
+
+    <string name="sec_test">تجربة الأتمتة على رقم (استخدم رقماً احتياطياً بصيغة دولية)</string>
+    <string name="hint_test">مثال: 201001234567</string>
+    <string name="btn_test_warn">تجربة إرسال التحذير</string>
+    <string name="btn_test_block">تجربة الحظر (سيحظر الرقم فعلاً)</string>
+
+    <string name="sec_log">سجل الأحداث</string>
+    <string name="log_empty">لا توجد أحداث بعد</string>
+    <string name="btn_refresh">تحديث</string>
+    <string name="btn_clear_log">مسح السجل</string>
+
+    <string name="toast_saved">تم الحفظ</string>
+    <string name="toast_reset">تم تصفير العدادات</string>
+    <string name="toast_bad_number">اكتب رقماً بصيغة دولية، مثال: 201001234567</string>
+    <string name="toast_need_service">فعّل خدمة الأتمتة (إمكانية الوصول) أولاً</string>
+    <string name="toast_test_started">بدأت التجربة — لا تلمس الشاشة</string>
+    <string name="toast_nothing_pending">لا توجد إجراءات معلّقة</string>
+    <string name="toast_run_started">جاري تنفيذ الإجراءات — لا تلمس الشاشة</string>
+    <string name="toast_copied">تم نسخ القائمة</string>
+    <string name="toast_list_cleared">تم مسح القائمة</string>
+</resources>

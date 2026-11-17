@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">حارس مكالمات واتساب</string>
-    <string name="accessibility_desc">يفتح محادثة الرقم في واتساب ويرسل رسالة التحذير أو ينفذ الحظر تلقائياً بعد تكرار المكالمات الفائتة.</string>
+    <string name="app_name">Call Guard</string>
+    <string name="app_title">WhatsApp Business Call Guard</string>
+    <string name="accessibility_desc">Opens the number chat in WhatsApp and sends the warning or blocks the number automatically after repeated missed calls.</string>
+
+    <string name="status_notif">Notification access: %1$s</string>
+    <string name="status_acc">Automation service (Accessibility): %1$s</string>
+    <string name="status_overlay">Display over other apps: %1$s</string>
+    <string name="status_pending">Pending actions: %1$d</string>
+
+    <string name="btn_notif">1) Enable notification access</string>
+    <string name="btn_access">2) Enable automation service (Accessibility)</string>
+    <string name="btn_overlay">3) Allow display over other apps</string>
+    <string name="btn_appinfo">App settings (to allow restricted settings)</string>
+
+    <string name="sec_appearance">Appearance</string>
+    <string name="lbl_language">Language</string>
+    <string name="lang_system">System</string>
+    <string name="lang_ar">العربية</string>
+    <string name="lang_en">English</string>
+    <string name="lbl_theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <string name="sw_enabled">Protection enabled</string>
+    <string name="lbl_max">Missed calls before blocking</string>
+    <string name="lbl_window">Counting window in hours (counting restarts after it)</string>
+    <string name="cb_warn">Send an automatic warning message</string>
+    <string name="lbl_warnat">Send the warning at call number</string>
+    <string name="lbl_message">Warning text (you can use {count} and {max})</string>
+    <string name="lbl_whitelist">Numbers excluded from blocking (one per line)</string>
+    <string name="cb_business">Monitor WhatsApp Business</string>
+    <string name="cb_regular">Monitor regular WhatsApp too</string>
+
+    <string name="sec_run">Execution</string>
+    <string name="cb_auto">Run actions automatically as soon as they are due</string>
+    <string name="lbl_auto_hint">WhatsApp opens on screen for about 10 seconds for each action. If this is off, actions wait in a queue until you press the button below.</string>
+    <string name="btn_runnow_n">Run pending actions now (%1$d)</string>
+
+    <string name="btn_save">Save settings</string>
+    <string name="btn_reset">Reset number counters</string>
+
+    <string name="sec_blocked_n">Blocked numbers (%1$d)</string>
+    <string name="blocked_empty">No blocked numbers yet</string>
+    <string name="btn_copy_blocked">Copy list</string>
+    <string name="btn_clear_blocked">Clear list</string>
+
+    <string name="sec_test">Test the automation on a number (use a spare number in international format)</string>
+    <string name="hint_test">Example: 201001234567</string>
+    <string name="btn_test_warn">Test sending the warning</string>
+    <string name="btn_test_block">Test blocking (the number will really be blocked)</string>
+
+    <string name="sec_log">Event log</string>
+    <string name="log_empty">No events yet</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="btn_clear_log">Clear log</string>
+
+    <string name="toast_saved">Saved</string>
+    <string name="toast_reset">Counters reset</string>
+    <string name="toast_bad_number">Enter a number in international format, for example 201001234567</string>
+    <string name="toast_need_service">Enable the automation service (Accessibility) first</string>
+    <string name="toast_test_started">Test started - do not touch the screen</string>
+    <string name="toast_nothing_pending">Nothing is pending</string>
+    <string name="toast_run_started">Running pending actions - do not touch the screen</string>
+    <string name="toast_copied">List copied</string>
+    <string name="toast_list_cleared">List cleared</string>
 </resources>
